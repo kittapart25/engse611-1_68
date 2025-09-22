@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Variables</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <p>เปิด Console (F12) เพื่อดูผลลัพธ์</p>
+
+    <script>
+        // ประกาศตัวแปรแต่ละประเภท
+        let studentName = "นายคำโว";          // String (ข้อความ)
+        const university = "มหาวิทยาลัยเทคโนโลยี"; // String (ค่าคงที่)
+        var age = 50;                         // Number (ตัวเลข)
+        let gpa = 2.5;                       // Number (ทศนิยม)
+        let isStudent = true;                 // Boolean (จริง/เท็จ)
+        let address = null;                   // Null (ค่าว่าง)
+        let phoneNumber;                      // Undefined (ไม่กำหนดค่า)
+
+        let a = 10;
+let b = 3;
+
+console.log('a + b =', a + b);  // บวก
+console.log('a % b =', a % b);  // เศษจากการหาร
+console.log('a ** b =', a ** b); // ยกกำลัง
+
+// Math Object
+console.log('ปัดเศษ 3.7:', Math.round(3.7));
+console.log('ปัดลง 3.7:', Math.floor(3.7));
+console.log('ปัดขึ้น 3.2:', Math.ceil(3.2));
+console.log('สุ่ม 0-1:', Math.random());
+
+// สุ่มเลข 1-6 (ลูกเต๋า)
+let dice = Math.floor(Math.random() * 6) + 1;
+console.log('ทอยลูกเต๋าได้:', dice);
+
+        // แสดงผลลัพธ์ใน Console
+        console.log("=== ข้อมูลนักศึกษา ===");
+        console.log("ชื่อ:", studentName);
+        console.log("มหาวิทยาลัย:", university);
+        console.log("อายุ:", age);
+        console.log("เกรดเฉลี่ย:", gpa);
+        console.log("เป็นนักศึกษา:", isStudent);
+        console.log("ที่อยู่:", address);
+        console.log("เบอร์โทร:", phoneNumber);
+    </script>
+</body>
+</html>
