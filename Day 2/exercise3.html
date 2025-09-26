@@ -10,7 +10,7 @@
     
     <div>
         <input type="text" id="studentName" placeholder="ชื่อนักศึกษา" value="แก้วมิ้ง">
-        <input type="number" id="score" placeholder="คะแนน" value="60" min="0" max="100">
+        <input type="number" id="score" placeholder="คะแนน" value="82" min="0" max="100">
         <button onclick="testFunctions()">ทดสอบ Functions</button>
     </div>
     
@@ -73,7 +73,7 @@
         console.log("BMI is :", calBMI);
 
         document.getElementById("resultBMI").innerHTML = `
-                <h3>ผลลัพธ์:</h3>
+                <h3>คำนวณ BMI:</h3>
                 <p><strong>Weight:</strong> ${vWeight}</p>
                 <p><strong>Height:</strong> ${vHeight}</p>
                 <h4>Result: ${calBMI.toFixed(2)}</h4>
@@ -101,7 +101,7 @@
             
             // แสดงผล
             document.getElementById('result').innerHTML = `
-                <h3>ผลลัพธ์:</h3>
+                <h3>ข้อมูลส่วนตัว:</h3>
                 <p><strong>คำทักทาย:</strong> ${greeting}</p>
                 <p><strong>คะแนน ${score} ได้เกรด:</strong> ${grade}</p>
                 <h4>ค่าใช้จ่ายประมาณ:</h4>
