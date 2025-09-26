@@ -117,55 +117,10 @@
                 }
                 output += `<p style="font-family: monospace;">${stars}</p>`;
             }
-
-            // ✅ รูปแบบ 6: พีระมิดตัวเลข
-            output += '<h4>รูปแบบที่ 6: พีระมิดตัวเลข</h4>';
-            for (let i = 1; i <= n; i++) {
-                let line = '';
-
-                // ช่องว่างด้านหน้า
-                for (let space = 1; space <= n - i; space++) {
-                    line += '&nbsp;&nbsp;';
-                }
-
-                // ตัวเลข
-                for (let j = 1; j <= (2 * i - 1); j++) {
-                    line += i + ' ';
-                }
-
-                output += `<p style="font-family: monospace;">${line}</p>`;
-            }
-
+            
             output += '</div>';
             resultDiv.innerHTML = output;
-        }
 
-        // รูปแบบ 5: สามเหลี่ยมดาวกลับหัว
-        output += '<h4>รูปแบบที่ 5: สามเหลี่ยมดาวกลับหัว</h4>';
-        for (let i = n; i >= 1; i--) {
-            let stars = '';
-            for (let j = 1; j <= i; j++) {
-                stars += '⭐ ';
-            }
-            output += `<p style="font-family: monospace;">${stars}</p>`;
-        }
-
-        // รูปแบบ 6: พีระมิดตัวเลข
-        output += '<h4>รูปแบบที่ 6: พีระมิดตัวเลข</h4>';
-        for (let i = 1; i <= n; i++) {
-            let line = '';
-
-            // ใส่ช่องว่างด้านหน้า (จัดให้อยู่ตรงกลาง)
-            for (let space = 1; space <= n - i; space++) {
-                line += '&nbsp;&nbsp;';
-            }
-
-            // ใส่ตัวเลข
-            for (let j = 1; j <= (2 * i - 1); j++) {
-                line += i + ' ';
-            }
-
-            output += `<p style="font-family: monospace;">${line}</p>`;
         }
 
         function calculateStatistics() {
