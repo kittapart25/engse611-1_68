@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "ข้าวผัดเบนโตะ",
+    "category": "อาหารจานเดียว",
+    "price": 120,
+    "description": "ข้าวผัดสไตล์ญี่ปุ่นพร้อมไข่ดาวและผักดอง",
+    "spicyLevel": 1,
+    "vegetarian": false,
+    "available": true,
+    "cookingTime": 15,
+    "ingredients": ["ข้าวญี่ปุ่น", "ซอสปรุงรส", "แครอทหั่นเต๋า", "บรอกโคลี", "ข้าวโพดหวาน"]
+  },
+  {
+    "id": 2,
+    "name": "ซุปมิโสะ",
+    "category": "ซุป",
+    "price": 80,
+    "description": "ซุปมิโสะรสกลมกล่อมพร้อมสาหร่ายและเต้าหู้",
+    "spicyLevel": 0,
+    "vegetarian": false,
+    "available": true,
+    "cookingTime": 10,
+    "ingredients": ["มิโสะ", "เต้าหู้", "สาหร่ายวากาเมะ", "ต้นหอม"]
+  },
+  {
+    "id": 3,
+    "name": "แกงกะหรี่",
+    "category": "แกง",
+    "price": 150,
+    "description": "แกงกะหรี่ญี่ปุ่นรสชาติกลมกล่อม เสิร์ฟพร้อมข้าวสวย",
+    "spicyLevel": 2,
+    "vegetarian": false,
+    "available": false,
+    "cookingTime": 30,
+    "ingredients": ["เนื้อวัว", "มันฝรั่ง", "แครอท", "หัวหอม", "ผงกะหรี่"]
+  },
+  {
+    "id": 4,
+    "name": "ซาชิมิ",
+    "category": "อาหารสด",
+    "price": 200,
+    "description": "ปลาดิบสดใหม่เสิร์ฟพร้อมวาซาบิและโชยุ",
+    "spicyLevel": 0,
+    "vegetarian": false,
+    "available": true,
+    "cookingTime": 5,
+    "ingredients": ["ปลาทูน่า", "ปลาแซลมอน", "วาซาบิ", "โชยุ"]
+  },
+  {
+    "id": 5,
+    "name": "โมจิถั่วแดง",
+    "category": "ของหวาน",
+    "price": 90,
+    "description": "ขนมโมจินุ่ม ๆ ไส้ถั่วแดงหวานกำลังดี",
+    "spicyLevel": 0,
+    "vegetarian": true,
+    "available": true,
+    "cookingTime": 10,
+    "ingredients": ["แป้งโมจิ", "ถั่วแดงกวน", "น้ำตาล"]
+  }
+]
