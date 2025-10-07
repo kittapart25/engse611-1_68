@@ -18,13 +18,16 @@ function FilterPanel({ onFilterChange, filters }) {
   // TODO 1: เพิ่มฟังก์ชัน handleRatingChange
   // ========================================
   // รับ parameter minRating
-  // เรียก onFilterChange({ minRating: minRating || '' })
-  
+    const handleRatingChange = (minRating) => {
+  onFilterChange({ minRating: minRating || '' })
+   }; 
   // ========================================
   // TODO 2: เพิ่มฟังก์ชัน handlePriceChange
   // ========================================
   // รับ parameter priceRange
-  // เรียก onFilterChange({ priceRange: priceRange || '' })
+    const handlePriceChange = (priceRange) => {
+  onFilterChange({ priceRange: priceRange || '' })
+  };
 
   return (
     <div className="filter-panel">
@@ -40,10 +43,6 @@ function FilterPanel({ onFilterChange, filters }) {
         </select>
       </div>
 
-      {/* ========================================
-          TODO 3: เพิ่ม filter สำหรับ minRating
-          ======================================== */}
-      {/* 
       <div className="filter-group">
         <label>คะแนนขั้นต่ำ:</label>
         <select 
@@ -56,12 +55,7 @@ function FilterPanel({ onFilterChange, filters }) {
           <option value="2">2 ดาวขึ้นไป ⭐⭐</option>
         </select>
       </div>
-      */}
 
-      {/* ========================================
-          TODO 4: เพิ่ม filter สำหรับ priceRange
-          ======================================== */}
-      {/* 
       <div className="filter-group">
         <label>ช่วงราคา:</label>
         <select 
@@ -74,7 +68,6 @@ function FilterPanel({ onFilterChange, filters }) {
           <option value="3">฿฿฿ (มากกว่า 300)</option>
         </select>
       </div>
-      */}
     </div>
   );
 }

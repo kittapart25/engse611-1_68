@@ -14,15 +14,15 @@ function SearchBar({ onSearch }) {
   // - มี debounce จะเรียก API แค่ 1 ครั้ง หลังจากพิมพ์เสร็จ 500ms
   //
   // ขั้นตอน:
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     if (searchTerm !== undefined) {
-  //       onSearch(searchTerm);
-  //     }
-  //   }, 500);
-  //   
-  //   return () => clearTimeout(timer);
-  // }, [searchTerm, onSearch]);
+   useEffect(() => {
+     const timer = setTimeout(() => {
+       if (searchTerm !== undefined) {
+         onSearch(searchTerm);
+       }
+     }, 500);
+     
+     return () => clearTimeout(timer);
+   }, [searchTerm, onSearch]);
 
   // Debounce effect
   useEffect(() => {
@@ -35,11 +35,13 @@ function SearchBar({ onSearch }) {
     return () => clearTimeout(timer);
   }, [searchTerm, onSearch]);
 
+  // เรียกทันที เมื่อกดปุ่ม
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(searchTerm);
   };
 
+  // ล้างผลค้นหา
   const handleClear = () => {
     setSearchTerm('');
     onSearch('');
