@@ -25,8 +25,8 @@ router.get("/:restaurantId", async (req, res) => {
 
     res.json({
       success: true,
-      data: [], // TODO: เปลี่ยนเป็นรีวิวที่กรองและเรียงแล้ว
-      total: 0, // TODO: เปลี่ยนเป็นจำนวนรีวิวที่กรอง
+      data: restaurantReviews,
+      total: restaurantReviews.length,
     });
   } catch (error) {
     console.error("Error fetching reviews:", error);

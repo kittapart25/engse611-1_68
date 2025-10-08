@@ -3,6 +3,7 @@ import RestaurantList from './components/RestaurantList';
 import RestaurantDetail from './components/RestaurantDetail';
 import './App.css';
 
+
 function App() {
   const [selectedRestaurantId, setSelectedRestaurantId] = useState(null);
 
