@@ -20,7 +20,7 @@ function SearchBar({ onSearch }) {
       if (searchTerm !== undefined) {
         onSearch(searchTerm);
       }
-    }, 10000);
+    }, 1000000);
     
     return () => clearTimeout(timer);
   }, [searchTerm, onSearch]);

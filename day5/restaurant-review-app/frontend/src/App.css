@@ -1,35 +1,42 @@
+/* 🌈 RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 🌤️ BASE STYLE */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f5f5;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f8f9ff 0%, #f1f3f9 100%);
   color: #333;
   line-height: 1.6;
 }
 
-
+/* APP LAYOUT */
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Header */
+/* 🌈 HEADER */
 .app-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: rgba(102, 126, 234, 0.9);
+  backdrop-filter: blur(10px);
   color: white;
-  padding: 2rem;
+  padding: 2.5rem 1rem;
   text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 .app-header h1 {
   font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
 .app-header p {
@@ -37,7 +44,7 @@ body {
   opacity: 0.9;
 }
 
-/* Main Content */
+/* 📦 MAIN CONTENT */
 .app-main {
   flex: 1;
   max-width: 1200px;
@@ -46,20 +53,22 @@ body {
   padding: 0 1rem;
 }
 
-/* Footer */
+/* 🦶 FOOTER */
 .app-footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.95rem;
 }
 
-/* Search Bar */
+/* 🔍 SEARCH BAR */
 .search-bar {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .search-input-wrapper {
@@ -71,15 +80,16 @@ body {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 1rem;
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  background: white;
 }
 
 .search-input:focus {
   outline: none;
   border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
 }
 
 .clear-button {
@@ -108,37 +118,42 @@ body {
 
 .search-button {
   padding: 0.75rem 1.5rem;
-  background: #667eea;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
 }
 
 .search-button:hover {
-  background: #5568d3;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #5a6fe0, #6d46a0);
+  transform: scale(1.05);
 }
 
 .search-button:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
-/* Filter Panel */
+/* 🎛️ FILTER PANEL */
 .filter-panel {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   flex-wrap: wrap;
+  transition: box-shadow 0.3s ease;
+}
+
+.filter-panel:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
 }
 
 .filter-group {
@@ -153,45 +168,55 @@ body {
 }
 
 .filter-group select {
-  padding: 0.5rem;
+  padding: 0.6rem 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fafafa;
 }
 
 .filter-group select:focus {
   outline: none;
   border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
 }
 
-/* Restaurant Grid */
+/* 🍽️ RESTAURANT GRID */
 .restaurant-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Restaurant Card */
+/* 🧁 RESTAURANT CARD */
 .restaurant-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
 }
 
 .restaurant-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .restaurant-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover img {
+  transform: scale(1.1);
 }
 
 .card-content {
@@ -201,7 +226,10 @@ body {
 .card-content h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  font-weight: 700;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .category {
@@ -244,27 +272,28 @@ body {
   font-size: 0.9rem;
 }
 
-/* Restaurant Detail */
+/* 🍴 RESTAURANT DETAIL */
 .restaurant-detail {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .back-button {
-  padding: 0.5rem 1rem;
-  background: #667eea;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   margin-bottom: 2rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .back-button:hover {
-  background: #5568d3;
+  background: linear-gradient(135deg, #5a6fe0, #6d46a0);
+  transform: scale(1.05);
 }
 
 .detail-header {
@@ -302,7 +331,7 @@ body {
   margin-top: 1rem;
 }
 
-/* Review Form */
+/* 📝 REVIEW FORM */
 .review-form {
   background: #f9fafb;
   padding: 2rem;
@@ -335,6 +364,7 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  background-color: white;
 }
 
 .form-group input:focus,
@@ -373,18 +403,19 @@ body {
 
 .review-form button {
   padding: 0.75rem 2rem;
-  background: #667eea;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .review-form button:hover {
-  background: #5568d3;
+  background: linear-gradient(135deg, #5a6fe0, #6d46a0);
+  transform: scale(1.03);
 }
 
 .review-form button:disabled {
@@ -392,7 +423,7 @@ body {
   cursor: not-allowed;
 }
 
-/* Review List */
+/* 💬 REVIEW LIST */
 .review-list {
   margin-top: 2rem;
 }
@@ -405,7 +436,7 @@ body {
 .review-item {
   background: #f9fafb;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 1rem;
   border-left: 4px solid #667eea;
 }
@@ -436,7 +467,7 @@ body {
   font-size: 0.875rem;
 }
 
-/* Loading & Error States */
+/* ⏳ LOADING / ERROR / NO RESULTS */
 .loading,
 .error,
 .no-results,
@@ -459,7 +490,15 @@ body {
   border-radius: 8px;
 }
 
-/* Responsive Design */
+/* ✨ ANIMATIONS */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
   .app-header h1 {
     font-size: 1.8rem;
