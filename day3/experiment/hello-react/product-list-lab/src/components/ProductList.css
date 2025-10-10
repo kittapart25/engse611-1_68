@@ -1,0 +1,139 @@
+/* src/components/ProductList.css - CSS พื้นฐาน นักศึกษาจะปรับปรุงเพิ่มเติม */
+.product-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 150px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  color: #292727;
+  margin-bottom: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 280px); /* ✅ fix 4 คอลัมน์ กว้างการ์ดละ 280px */
+  gap: 25px; /* ระยะห่างระหว่าง card */
+  max-width: calc(280px * 4 + 25px * 3); /* ✅ ความกว้างรวม 4 การ์ด + ช่องว่าง 3 ช่อง */
+  margin: 0 auto 30px auto; /* ✅ บล็อก grid อยู่กึ่งกลาง */
+  justify-content: center; /* เผื่อ align item ให้อยู่กึ่งกลาง */
+}
+
+
+/* Product Card - โครงสร้างพื้นฐาน */
+.product-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  margin-top: 15px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.product-actions {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  background: #1ecc0e;
+  color: white;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn:disabled {
+  background: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+/* ⭐ Rating Display */
+.product-rating {
+  color: #ffc107;   /* สีทอง */
+  font-size: 1.1rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-rating span {
+  font-size: 0.9rem;
+  color: #555;  /* สีเทาสำหรับตัวเลข rating */
+}
+
+/* src/components/ProductList.css - CSS พื้นฐาน นักศึกษาจะปรับปรุงเพิ่มเติม */
+.product-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ... (โค้ด CSS เดิมทั้งหมด เช่น .header, .products-grid, .product-card ฯลฯ) ... */
+
+/* ✅ เพิ่มส่วนนี้ไว้ท้ายไฟล์ */
+.original-price {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #6c757d;
+  margin-left: 8px;
+}
+
+.discount {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #dc3545;
+  margin-left: 6px;
+}
+
+
+
